@@ -302,7 +302,7 @@ def Outliers(dicta, CSVFile, deger):
 
                 degerler.append(j)
 
-        strr = "Min: "+str(minn)+", Max: "+str(maxx)+", Aykiri Degerler: "+str(degerler)
+        strr = "Min: "+str(minn)+", Max: "+str(maxx)+", Outliers: "+str(degerler)
 
         dicta["Column Name"].append(i)
         dicta["Outliers"].append(strr)
