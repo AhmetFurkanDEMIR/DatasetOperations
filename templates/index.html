@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<body>
+
+    <div class="container" style="min-height:100% width:80%">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                {{message}}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        
+        {% block asd %}{% endblock %}
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+
+<div class = "text-center">
+    <p><font face="tahoma" size="5" color="darkslategray">
+    <b>demir.ai Dataset Operations</b></font></p>
+</div>
+
+
+<pre>&nbsp;</pre>
+
+<form method="POST" action="/dataset" enctype="multipart/form-data">
+
+    <div class = "text-center">
+        <p><font face="tahoma" size="3" color="black">
+        <b>Select CSV File (Dataset)</b></font></p>
+
+        <div align="center"><img src="{{ url_for('static', filename = 'images/csvIcon.png') }}" ></div>
+        <input type = "file" name = "fileCSV" value = "content_file" class="">
+
+        <pre>&nbsp;</pre>
+        <pre>&nbsp;</pre>
+
+        <p><font face="tahoma" size="3" color="black">
+        <b>Operations on the dataset</b></font></p>
+
+
+        <label for="lang">Column based deletion : </label>
+            <select name="column" id="lang">
+            {% for rs in rss %}
+            <option value="{{rs}}">{{rs}}</option>
+            {% endfor %}
+        </select>
+
+        <pre>&nbsp;</pre>
+
+        <label for="lang">Row based deletion (Number of tolerances) : </label>
+            <select name="row" id="lang">
+            {% for rs in rssa %}
+            <option value="{{rs}}">{{rs}}</option>
+            {% endfor %}
+        </select>
+
+        <pre>&nbsp;</pre>
+
+        <label for="lang">Methods of filling missing values : </label>
+            <select name="methods" id="lang">
+            {% for rs in rssaa %}
+            <option value="{{rs}}">{{rs}}</option>
+            {% endfor %}
+        </select>
+
+        <pre>&nbsp;</pre>
+        <pre>&nbsp;</pre>
+
+        <button type="submit" class="btn btn-primary">Start actions</button>
+
+    </div>
+
+</form>
+
+<pre>&nbsp;</pre>
+
+
+{% endblock body %}
