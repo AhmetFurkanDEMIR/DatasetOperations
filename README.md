@@ -43,9 +43,9 @@ Again, thanks to this web application, you can reach visual or numerical results
 
 * [Column-based deletion of null data (nan/null)](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L13): The number of nulls is calculated for each column, then the percentage of nulls is calculated and if this percentage is greater than the percentage the user enters, this column is deleted.
 
-* Row-based deletion of null data (nan/null): The number of nulls is calculated for each line, and if this number of nulls is greater than the number entered by the user, this line is deleted.
+* [Row-based deletion of null data (nan/null)](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L32): The number of nulls is calculated for each line, and if this number of nulls is greater than the number entered by the user, this line is deleted.
 
-* Filling in blank data by mean, median and mode:
+* [Filling in blank data by mean, median and mode](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L51):
 
     * Mean: The sum of the non-blank values of the columns is taken and divided by the total number of non-blank values, the average obtained is written instead of the empty values.
     
@@ -56,23 +56,23 @@ Again, thanks to this web application, you can reach visual or numerical results
 
 ### Information you can learn about your dataset
 
-* Mean of columns: The mean is calculated for each column separately and the column mean information is presented to the user.
+* [Mean of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L160): The mean is calculated for each column separately and the column mean information is presented to the user.
 
-* Median of columns: The median is calculated for each column separately and the column median information is presented to the user.
+* [Median of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L185): The median is calculated for each column separately and the column median information is presented to the user.
 
-* Mode of columns: The mode is calculated for each column separately and the column mode information is presented to the user.
+* [Mode of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L213): The mode is calculated for each column separately and the column mode information is presented to the user.
 
-* Frequency of columns: Frequency is calculated for each column and the frequency information of the columns is presented to the user. In this section, frequency visualization is also done by creating a bar plot from scratch with Opencv.
+* [Frequency of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L532): Frequency is calculated for each column and the frequency information of the columns is presented to the user. In this section, frequency visualization is also done by creating a bar plot from scratch with Opencv.
 
-* Interquartile range value (IQR) of columns: Q1 and Q3 values ​​are found for each column, then the IQR value of the columns is found with Q3-Q1 and presented to the user.
+* [Interquartile range value (IQR) of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L260): Q1 and Q3 values are found for each column, then the IQR value of the columns is found with Q3-Q1 and presented to the user.
 
-* Outliers of columns: If the data in the column is less than (Q1-IQR * 1.5) and greater than (Q3+IQR * 1.5), it is called outlier and this information is presented to the user.
+* [Outliers of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L280): If the data in the column is less than (Q1-IQR * 1.5) and greater than (Q3+IQR * 1.5), it is called outlier and this information is presented to the user.
 
-* Five number summary of columns: Minimum, Q1, median, Q3 and Maximum values are calculated and presented to the user. 
+* [Five number summary of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L314): Minimum, Q1, median, Q3 and Maximum values are calculated and presented to the user. 
 
-* Box Chart of columns: After finding the minimum, Q1, median, Q3 and maximum values for each column, a box chart is created from scratch with Opencv and this chart is presented to the user.
+* [Box Chart of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L374): After finding the minimum, Q1, median, Q3 and maximum values for each column, a box chart is created from scratch with Opencv and this chart is presented to the user.
 
-* Variance and standard deviation of columns: The variance and standard deviation for each column are calculated and presented to the user.
+* [Variance and standard deviation of columns](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L352): The variance and standard deviation for each column are calculated and presented to the user.
 
 
 ### Application video
