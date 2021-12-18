@@ -41,7 +41,7 @@ Again, thanks to this web application, you can reach visual or numerical results
 
 ### Null value (nan/null) operations
 
-* Column-based deletion of null data (nan/null): The number of nulls is calculated for each column, then the percentage of nulls is calculated and if this percentage is greater than the percentage the user enters, this column is deleted.
+* [Column-based deletion of null data (nan/null)](https://github.com/AhmetFurkanDEMIR/DatasetOperations/blob/main/operations.py#L13): The number of nulls is calculated for each column, then the percentage of nulls is calculated and if this percentage is greater than the percentage the user enters, this column is deleted.
 
 * Row-based deletion of null data (nan/null): The number of nulls is calculated for each line, and if this number of nulls is greater than the number entered by the user, this line is deleted.
 
